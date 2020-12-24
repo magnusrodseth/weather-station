@@ -3,8 +3,18 @@
   box-shadow: 5px 5px 16px rgba(68, 68, 68, 0.2);
 }
 
-.topContainer {
+.topContainer,
+.bottomContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.temperatureContainer {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
 }
