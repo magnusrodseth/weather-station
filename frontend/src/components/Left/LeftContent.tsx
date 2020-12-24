@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Index.module.css";
+import styles from "../../styles/Index.module.css";
 import Compass from "./Compass";
 
 const LeftContent = () => {
@@ -7,7 +7,7 @@ const LeftContent = () => {
     <div className={`${styles.leftContainer}`}>
       <h1>Vindretning</h1>
       <Compass
-        degree={123}
+        degree={32}
         directions={["N", "NE", "E", "SE", "S", "SW", "W", "NW"]}
       />
     </div>

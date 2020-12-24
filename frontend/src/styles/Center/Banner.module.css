@@ -1,0 +1,10 @@
+.bannerContainer {
+  padding: 15px;
+  box-shadow: 5px 5px 16px rgba(68, 68, 68, 0.2);
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

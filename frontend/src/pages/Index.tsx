@@ -1,16 +1,15 @@
-import { Typography } from "@material-ui/core";
 import React from "react";
-import CenterContent from "../components/CenterContent";
-import LeftContent from "../components/LeftContent";
-import RightContent from "../components/RightContent";
+import CenterContent from "../components/Center/CenterContent";
+import LeftContent from "../components/Left/LeftContent";
+import RightContent from "../components/Right/RightContent";
 import styles from "../styles/Index.module.css";
 
 const Index = () => {
   return (
     <div className={`${styles.wrapper}`}>
-        <LeftContent />
-        <CenterContent />
-        <RightContent />
+      <LeftContent />
+      <CenterContent />
+      <RightContent />
     </div>
   );
 };
