@@ -7,6 +7,7 @@ import {
   PointerDirective,
 } from "@syncfusion/ej2-react-circulargauge";
 
+// TODO: Show directions, not degrees, in the compass
 const Compass = ({
   degree,
   directions,
@@ -16,7 +17,7 @@ const Compass = ({
 }) => {
   const START_DEGREES = 0;
   const END_DEGREES = 360;
-  
+
   return (
     <CircularGaugeComponent>
       <AxesDirective>
@@ -71,9 +72,6 @@ const Compass = ({
               }}
             />
           </PointersDirective>
-          {/* <RangesDirective>
-                  <RangeDirective start={7} end={7} />
-                </RangesDirective> */}
         </AxisDirective>
       </AxesDirective>
     </CircularGaugeComponent>

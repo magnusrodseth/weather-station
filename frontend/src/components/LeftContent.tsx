@@ -5,9 +5,9 @@ import Compass from "./Compass";
 const LeftContent = () => {
   return (
     <div className={`${styles.leftContainer}`}>
-      <h1>Left content goes here...</h1>
+      <h1>Vindretning</h1>
       <Compass
-        degree={270}
+        degree={123}
         directions={["N", "NE", "E", "SE", "S", "SW", "W", "NW"]}
       />
     </div>
