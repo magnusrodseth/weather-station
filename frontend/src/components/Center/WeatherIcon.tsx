@@ -1,5 +1,4 @@
 import React from "react";
-import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import styles from "../../styles/Center/Banner.module.css";
 
 // TODO: Create object where key corresponds to weather report from VWS

@@ -8,11 +8,9 @@ import Wind from "./Wind";
 
 const Banner = () => {
   return (
-    <div className={`${styles.bannerContainer} m-4`}>
+    <div className={`${styles.bannerContainer} m-2`}>
       {/* Top */}
-      <div className={`${styles.topContainer}`}>
-        <Time />
-      </div>
+      <Time />
 
       {/* Bottom */}
       <div className={`${styles.bottomContainer}`}>

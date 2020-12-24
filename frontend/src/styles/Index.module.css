@@ -21,12 +21,7 @@
 
 .centerContainer {
   display: flex;
-  flex-direction: column;
   flex: 3;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.webcamImage {
-  max-width: 80%;
+  display: grid;
+  justify-items: center;
 }

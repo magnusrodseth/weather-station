@@ -1,16 +1,13 @@
 import React from "react";
 import styles from "../../styles/Index.module.css";
 import Banner from "./Banner";
+import WebcamImage from "./WebcamImage";
 
 const CenterContent = () => {
   return (
     <div className={`${styles.centerContainer}`}>
       <Banner />
-      <img
-        src="./test-image.jpg"
-        alt="Current weather"
-        className={`${styles.webcamImage}`}
-      />
+      <WebcamImage />
     </div>
   );
 };

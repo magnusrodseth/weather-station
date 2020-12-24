@@ -7,7 +7,7 @@ const LeftContent = () => {
     <div className={`${styles.leftContainer}`}>
       <h1>Vindretning</h1>
       <Compass
-        degree={32}
+        degree={287}
         directions={["N", "NE", "E", "SE", "S", "SW", "W", "NW"]}
       />
     </div>

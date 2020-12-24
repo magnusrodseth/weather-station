@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import styles from "../styles/Navbar.module.css";
 import HelpIcon from "@material-ui/icons/Help";
-import { Button, IconButton } from "@material-ui/core";
+import IconButton from "@material-ui/core/IconButton/IconButton";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
