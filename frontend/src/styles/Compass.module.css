@@ -1,0 +1,7 @@
+.container {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(68, 68, 68, 0.4);
+  border: 2px solid #90caf9;
+}
