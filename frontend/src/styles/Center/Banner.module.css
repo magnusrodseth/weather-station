@@ -1,6 +1,6 @@
 .bannerContainer {
-  padding: 15px;
-  box-shadow: 5px 5px 16px rgba(68, 68, 68, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
 .topContainer,
@@ -10,9 +10,16 @@
   align-items: center;
 }
 
-.temperatureContainer {
+.temperatureContainer,
+.weatherContainer,
+.rainfallContainer,
+.windContainer {
   display: flex;
   align-items: center;
+}
+
+.currentWeatherIcon {
+  width: 42px;
 }
 
 .icon {

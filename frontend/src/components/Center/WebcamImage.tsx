@@ -1,12 +1,13 @@
 import React from "react";
-import styles from "../../styles/Center/WebcamImage.module.css";
+import transitionStyles from "../../styles/Transitions/Transitions.module.css";
 
 const WebcamImage = () => {
   return (
     <img
       src="./test-image.jpg"
       alt="Current weather"
-      className={`${styles.webcamImage} m-2`}
+      width="90%"
+      className={`${transitionStyles.webcamImage} m-2`}
     />
   );
 };

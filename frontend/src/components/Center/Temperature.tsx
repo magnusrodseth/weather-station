@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import React from "react";
 import styles from "../../styles/Center/Banner.module.css";
 
@@ -12,7 +13,9 @@ const Temperature = () => {
         alt="Thermometer Icon"
         className={`${styles.icon}`}
       />
-      {temperature} <sup>o</sup>C
+      <Typography variant="subtitle1" className={`ml-2`}>
+        {temperature} <sup>o</sup>C
+      </Typography>
     </div>
   );
 };
