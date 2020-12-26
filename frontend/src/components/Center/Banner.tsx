@@ -10,7 +10,7 @@ import Wind from "./Wind";
 const Banner = () => {
   return (
     <div
-      className={`${styles.bannerContainer} ${transitionStyles.bannerContainer} p-2 m-2`}
+      className={`${styles.bannerContainer} ${transitionStyles.bannerContainer} p-3 m-2`}
     >
       {/* Top */}
       <Time />
