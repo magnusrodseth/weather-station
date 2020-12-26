@@ -7,53 +7,41 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-
-interface Column {
-  id: "name" | "min" | "current" | "max";
-  label: string;
-}
-
-const columns: Column[] = [
-  { id: "name", label: "Name" },
-  { id: "min", label: "Minimum" },
-  { id: "current", label: "Nå" },
-  { id: "max", label: "Maximum" },
-];
-
-interface Data {
-  name: string;
-  min: number;
-  current: number;
-  max: number;
-}
-
-function createData(
-  name: string,
-  min: number,
-  current: number,
-  max: number
-): Data {
-  return { name, min, current, max };
-}
-
-const rows = [
-  createData("temp", -20, 18, 20),
-  createData("luftfuktighet", -20, 18, 20),
-  createData("duggpunkt", -20, 18, 20),
-  createData("solstråling", -20, 18, 20),
-];
-
-const useStyles = makeStyles({
-  root: {
-    width: "100%",
-  },
-  container: {
-    maxHeight: 440,
-  },
-});
+import { ITableColumn, ITableRow } from "../../tools/types";
 
 const CustomTable = () => {
+  function createData(
+    name: string,
+    min: number,
+    current: number,
+    max: number
+  ): ITableRow {
+    return { name, min, current, max };
+  }
+
+  const useStyles = makeStyles({
+    root: {
+      width: "100%",
+    },
+    container: {
+      maxHeight: 400,
+    },
+  });
   const classes = useStyles();
+
+  const columns: ITableColumn[] = [
+    { id: "name", label: "Name" },
+    { id: "min", label: "Minimum" },
+    { id: "current", label: "Nå" },
+    { id: "max", label: "Maximum" },
+  ];
+
+  const rows = [
+    createData("temp", -20, 18, 20),
+    createData("luftfuktighet", -20, 18, 20),
+    createData("duggpunkt", -20, 18, 20),
+    createData("solstråling", -20, 18, 20),
+  ];
 
   return (
     <Paper className={classes.root}>
@@ -69,7 +57,7 @@ const CustomTable = () => {
           <TableBody>
             {rows.map((row) => {
               return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.name}>
+                <TableRow hover tabIndex={-1} key={row.name}>
                   {columns.map((column) => {
                     const value = row[column.id];
                     return <TableCell key={column.id}>{value}</TableCell>;
