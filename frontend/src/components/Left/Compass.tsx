@@ -19,7 +19,7 @@ const Compass = ({
   const END_DEGREES = 360;
 
   return (
-    <CircularGaugeComponent>
+    <CircularGaugeComponent height="200px">
       <AxesDirective>
         <AxisDirective
           radius="100%"
