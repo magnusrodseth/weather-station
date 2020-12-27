@@ -5,7 +5,7 @@ import WindDirection from "./WindDirection";
 const LeftContent = () => {
   return (
     <div className={`${styles.leftContainer}`}>
-      <WindDirection/>
+      <WindDirection />
     </div>
   );
 };

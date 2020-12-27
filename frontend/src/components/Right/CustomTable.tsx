@@ -8,6 +8,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import { ITableColumn, ITableRow } from "../../tools/types";
+import transitionStyles from "../../styles/Transitions/Transitions.module.css";
 
 const CustomTable = () => {
   function createData(
@@ -44,31 +45,33 @@ const CustomTable = () => {
   ];
 
   return (
-    <Paper className={classes.root}>
-      <TableContainer className={classes.container}>
-        <Table stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow>
-              {columns.map((column) => (
-                <TableCell key={column.id}>{column.label}</TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => {
-              return (
-                <TableRow hover tabIndex={-1} key={row.name}>
-                  {columns.map((column) => {
-                    const value = row[column.id];
-                    return <TableCell key={column.id}>{value}</TableCell>;
-                  })}
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </Paper>
+    <div className={`${transitionStyles.tableContainer}`}>
+      <Paper className={classes.root}>
+        <TableContainer className={classes.container}>
+          <Table stickyHeader aria-label="sticky table">
+            <TableHead>
+              <TableRow>
+                {columns.map((column) => (
+                  <TableCell key={column.id}>{column.label}</TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => {
+                return (
+                  <TableRow hover tabIndex={-1} key={row.name}>
+                    {columns.map((column) => {
+                      const value = row[column.id];
+                      return <TableCell key={column.id}>{value}</TableCell>;
+                    })}
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Paper>
+    </div>
   );
 };
 
